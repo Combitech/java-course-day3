@@ -1,4 +1,4 @@
-# java-course-day2
+# java-course-day3
 
 Kod från dag 3 i "Utveckling i modern Java"
 
