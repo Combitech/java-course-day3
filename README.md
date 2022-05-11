@@ -14,6 +14,8 @@ Kursmaterialet för denna dagen består av detta git-repo och inspelningar från
 - Lite kort repetition från förra gången. Introduktion till Spring och Spring Boot. Skapade en första Hello World-Controller i Spring Boot.
 
 
+[9.40-10.30](https://combitechcloud-my.sharepoint.com/personal/martin_frisk_combitech_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fmartin%5Ffrisk%5Fcombitech%5Fcom%2FDocuments%2FRecordings%2FDag%203%20Java%2Dkurs%2D20220511%5F094127%2DM%C3%B6tesinspelning%2Emp4&parent=%2Fpersonal%2Fmartin%5Ffrisk%5Fcombitech%5Fcom%2FDocuments%2FRecordings&ga=1)
+- Skapade UserController, UserDTO och UserEntity. Pratade om hur man skapade en klass som representerade en databastabell. La till application.properties för att kunna konfiguera vår Spring-applikation.
 
 
 
