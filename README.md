@@ -25,6 +25,9 @@ Kursmaterialet för denna dagen består av detta git-repo och inspelningar från
 [13.55-14.20](https://combitechcloud-my.sharepoint.com/personal/martin_frisk_combitech_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fmartin%5Ffrisk%5Fcombitech%5Fcom%2FDocuments%2FRecordings%2FDag%203%20Java%2Dkurs%2D20220511%5F135636%2DM%C3%B6tesinspelning%2Emp4&parent=%2Fpersonal%2Fmartin%5Ffrisk%5Fcombitech%5Fcom%2FDocuments%2FRecordings&ga=1)
 - Skapade en ny entity Rights. Varje User kan ha flera Rights och varje Right kan tillhöra fler än en User.
 
+[14-40-15.10](https://combitechcloud-my.sharepoint.com/personal/martin_frisk_combitech_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fmartin%5Ffrisk%5Fcombitech%5Fcom%2FDocuments%2FRecordings%2FDag%203%20Java%2Dkurs%2D20220511%5F144045%2DM%C3%B6tesinspelning%2Emp4&parent=%2Fpersonal%2Fmartin%5Ffrisk%5Fcombitech%5Fcom%2FDocuments%2FRecordings&ga=1)
+- Skapade ett nytt api i User-tjänsten som anropade Image-tjänsten för att hämta bilder. För att få detta att fungera behövs det att man har en minio server körandes lokalt på datorn samt att man har tjänsten som byggdes dag 2 och som finns i repot java-course-day2 körandes lokalt.
+
 ### Dagens innehåll
 
 Målet med dagen är att bygga ytterligare mikrotjänst. Denna gång med hjälp av Spring Boot (https://spring.io/projects/spring-boot). Vi kommer även att kolla på databaser med hjälp av JPA, Hibernate och då spara data i en H2-databas. Vi använder H2 då det är en liten simpel in-memory-databas så man slipper sätta upp en hel databas på sin lokala maskin eller behöva ansluta mot någon molnbaserad. Initial tanke var att köra databas i en Docker-container men i och med ändringarna för licenser för Docker Desktop så blev det alldeles för krångligt att få till.
