@@ -1,6 +1,7 @@
 package com.combitech.javacourseday3.controller;
 
 import com.combitech.javacourseday3.repository.UserRepository;
+import com.combitech.javacourseday3.service.UserService;
 import com.combitech.javacourseday3.user.UserDTO;
 import com.combitech.javacourseday3.user.UserEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,22 +10,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @RestController
 @RequestMapping("api/users")
 public class UserController {
 
-    private final UserRepository userRepository;
+    private final UserService userService;
 
-    public UserController(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    public UserController(UserService userService) {
+        this.userService = userService;
     }
 
 
     @GetMapping("/{id}")
     public UserDTO getUser(@PathVariable("id") long id) {
-        UserEntity userEntity = userRepository.getById(id);
-        return userEntity.toDto();
+        return userService.getUser(id);
+    }
+
+    @GetMapping
+    public List<UserDTO> getUsers(){
+        return userService.getUsers();
     }
 
 }
