@@ -49,6 +49,11 @@ public class UserService {
                .orElseGet(() -> userRepository.save(new UserEntity(userDTO.getName(), userDTO.isActive())).toDto());
     }
 
+    public void deleteUser(long id){
+        userRepository.deleteById(id);
+    }
+
+
     private List<UserDTO> entitiesToDtos(List<UserEntity> userEntities) {
         return userEntities.stream()
                 .map(userEntity -> userEntity.toDto())

@@ -15,6 +15,9 @@ public class UserEntity {
     private LocalDateTime created;
     private LocalDateTime modified;
     private boolean active;
+    @ManyToOne
+    @JoinColumn(name = "organization_id")
+    private OrganizationEntity organization;
 
     public UserEntity(String name, boolean active){
         this.name = name;
@@ -66,6 +69,6 @@ public class UserEntity {
     }
 
     public UserDTO toDto(){
-        return new UserDTO(this.id, this.name, this.created, this.modified, this.active);
+        return new UserDTO(this.id, this.name, this.created, this.modified, this.active, this.organization);
     }
 }
