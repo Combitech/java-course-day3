@@ -34,3 +34,20 @@ Målet med dagen är att bygga ytterligare mikrotjänst. Denna gång med hjälp 
 
 Spring är med råge det största och mest populära ramverket inom Java och som utvecklare är det stor chans att man kommer stöta på någon variant av Spring. Spring Boot är en del av Spring som låter utvecklare bygga mikrotjänster på ett väldigt snabbt sätt. Där man följer "convention-over-configuration".
 
+
+### Länkar till vidare läsning:
+
+[dev.java](https://dev.java/)
+- samlingssida med det senaste rörande Java-världen.
+
+[spring.io](https://spring.io/)
+- Springs officiella sida. Deras dokumentation är väldigt bra.
+
+[Vlad Mihalecea](https://vladmihalcea.com/)
+- Väldigt bra resurs för att lära sig mer om Hibernate/JPA.
+
+[Baeldung](https://www.baeldung.com/)
+- Mycket korta guider om i stort sett allt inom Java. Mycket Spring men även mycket annat. I bland lite ytligt och går inte riktigt in på djupet. Men för att få en hum om hur något fungerar så är det en bra resurs.
+
+[/r/java](https://www.reddit.com/r/java/)
+- subreddit om Java. Högt och lågt i diskussionerna men intressant att läsa och få en inblick i hur andra utvecklare ser på Java.
