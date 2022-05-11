@@ -1,6 +1,8 @@
 package com.combitech.javacourseday3.user;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserDTO {
 
@@ -10,14 +12,21 @@ public class UserDTO {
     private LocalDateTime modified;
     private boolean active;
     private String organizationName;
+    private List<String> rights;
 
-    public UserDTO(long id, String name, LocalDateTime created, LocalDateTime modified, boolean active, OrganizationEntity organization) {
+    public UserDTO(long id, String name, LocalDateTime created, LocalDateTime modified, boolean active, OrganizationEntity organization, List<RightEntity> rights) {
         this.id = id;
         this.name = name;
         this.created = created;
         this.modified = modified;
         this.active = active;
         this.organizationName = organization.getName();
+        if(rights != null && rights.size() >0){
+            this.rights = rights.stream().map(right -> right.getName()).toList();
+        }
+        else {
+            this.rights = new ArrayList<>();
+        }
     }
 
     public boolean isActive() {
@@ -66,5 +75,9 @@ public class UserDTO {
 
     public void setOrganizationName(String organizationName) {
         this.organizationName = organizationName;
+    }
+
+    public List<String> getRights() {
+        return rights;
     }
 }

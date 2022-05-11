@@ -3,6 +3,7 @@ package com.combitech.javacourseday3.user;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -18,6 +19,8 @@ public class UserEntity {
     @ManyToOne
     @JoinColumn(name = "organization_id")
     private OrganizationEntity organization;
+    @ManyToMany
+    private List<RightEntity> rights;
 
     public UserEntity(String name, boolean active){
         this.name = name;
@@ -69,6 +72,10 @@ public class UserEntity {
     }
 
     public UserDTO toDto(){
-        return new UserDTO(this.id, this.name, this.created, this.modified, this.active, this.organization);
+        return new UserDTO(this.id, this.name, this.created, this.modified, this.active, this.organization, this.rights);
+    }
+
+    public List<RightEntity> getRights() {
+        return rights;
     }
 }
