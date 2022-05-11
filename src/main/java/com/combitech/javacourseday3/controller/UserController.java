@@ -40,4 +40,9 @@ public class UserController {
         return userService.createUser(userDTO);
     }
 
+    @PutMapping("/{id}")
+    public UserDTO updateUser(@PathVariable("id") long id, @RequestBody UserDTO userDTO){
+        return userService.updateUser(userDTO, id);
+    }
+
 }
