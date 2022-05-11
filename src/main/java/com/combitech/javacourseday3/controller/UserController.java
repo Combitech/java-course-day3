@@ -4,10 +4,7 @@ import com.combitech.javacourseday3.repository.UserRepository;
 import com.combitech.javacourseday3.service.UserService;
 import com.combitech.javacourseday3.user.UserDTO;
 import com.combitech.javacourseday3.user.UserEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -31,6 +28,16 @@ public class UserController {
     @GetMapping
     public List<UserDTO> getUsers(){
         return userService.getUsers();
+    }
+
+    @GetMapping("/active")
+    public List<UserDTO> getActiveUsers(){
+        return userService.getActiveUsers();
+    }
+
+    @PostMapping
+    public UserDTO createUser(@RequestBody UserDTO userDTO) {
+        return userService.createUser(userDTO);
     }
 
 }

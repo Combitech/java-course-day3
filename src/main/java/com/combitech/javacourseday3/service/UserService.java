@@ -23,10 +23,24 @@ public class UserService {
 
     public List<UserDTO> getUsers(){
         List<UserEntity> userEntities = userRepository.findAll();
-        List<UserDTO> userDTOS = userEntities.stream()
+        return entitiesToDtos(userEntities);
+    }
+
+    public List<UserDTO> getActiveUsers(){
+        List<UserEntity> userEntities = userRepository.getAllActiveUsers();
+        return entitiesToDtos(userEntities);
+    }
+
+    public UserDTO createUser(UserDTO userDTO){
+        UserEntity userEntity = new UserEntity(userDTO.getName(), userDTO.isActive());
+        userRepository.save(userEntity);
+        return userEntity.toDto();
+    }
+
+    private List<UserDTO> entitiesToDtos(List<UserEntity> userEntities) {
+        return userEntities.stream()
                 .map(userEntity -> userEntity.toDto())
                 .toList();
-        return userDTOS;
     }
 
 }
