@@ -20,7 +20,9 @@ public class UserDTO {
         this.created = created;
         this.modified = modified;
         this.active = active;
-        this.organizationName = organization.getName();
+        if(organization!= null){
+            this.organizationName = organization.getName();
+        }
         if(rights != null && rights.size() >0){
             this.rights = rights.stream().map(right -> right.getName()).toList();
         }
