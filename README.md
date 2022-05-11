@@ -19,7 +19,8 @@ Kursmaterialet för denna dagen består av detta git-repo och inspelningar från
 [10.45-11.30](https://combitechcloud-my.sharepoint.com/personal/martin_frisk_combitech_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fmartin%5Ffrisk%5Fcombitech%5Fcom%2FDocuments%2FRecordings%2FDag%203%20Java%2Dkurs%2D20220511%5F104557%2DM%C3%B6tesinspelning%2Emp4&parent=%2Fpersonal%2Fmartin%5Ffrisk%5Fcombitech%5Fcom%2FDocuments%2FRecordings&ga=1)
 - Skapade UserService, mer metoder i Controller och metod för att skriva egen SQL.
 
-
+[13.00-13.45](https://combitechcloud-my.sharepoint.com/personal/martin_frisk_combitech_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fmartin%5Ffrisk%5Fcombitech%5Fcom%2FDocuments%2FRecordings%2FDag%203%20Java%2Dkurs%2D20220511%5F130024%2DM%C3%B6tesinspelning%2Emp4&parent=%2Fpersonal%2Fmartin%5Ffrisk%5Fcombitech%5Fcom%2FDocuments%2FRecordings&ga=1)
+- Lade till upgrade och delete i api:et för Users. Skapade en ny entity Organizations, varje User är knuten till en organization.
 
 ### Dagens innehåll
 
